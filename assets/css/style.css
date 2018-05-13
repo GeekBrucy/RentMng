@@ -1,0 +1,47 @@
+/* 
+colors
+  #F35F5F orange - header footer
+  #CC435F red - content
+  #F1EA65 yellow - content
+  #36A3EB blue - for button
+*/
+/****************** customize reset START ******************/
+*, a {
+  color: #fff;
+}
+html {
+  min-height: 100%
+}
+body {
+  height: 100%;
+}
+/****************** customize reset END ******************/
+
+/****************** tools START******************/
+.container {
+  width: 1280px;
+  background-color: #cc435f;
+  margin: 0 auto
+}
+/****************** tools END ******************/
+
+/****************** header CSS START ******************/
+body {
+  background: #F1EA65;
+}
+
+header.pg-header {
+  background: #f35f5f;
+  line-height: 100px;
+  text-align: center;
+}
+
+header.pg-header h1 {
+  font-size: 1rem;
+  display: inline-block;
+}
+
+header.pg-header ul, header.pg-header li{
+  display: inline-block
+}
+/****************** header CSS END ******************/
