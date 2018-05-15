@@ -28,24 +28,39 @@
               <option value="monthly">Monthly</option>
             </select>
           </div>
-          <div class="input-group">
-            <label for="bill">Your Bill Expense:</label>
-            <input id="bill" name="bill" type="number">
+          <div class="input-group add-bill text-center">
+            <button class="btn-submit">Add Bill</button>
+            <input type="text" class="bill-name">
           </div>
-          <div class="input-group date-input">
-            <input type="date" id="fromDate">
-            <input type="date" id="toDate">
+          <div class="bill-section">
+
           </div>
           <div class="input-group">
             <label for="morgage">Your Morgage:</label>
             <input id="morgage" name="morgage" type="number">
+            <select name="frequency" id="morgage_frequency">
+              <option value="weekly" selected="selected">Weekly</option>
+              <option value="monthly">Monthly</option>
+            </select>
+          </div>
+          <div class="input-group add-other text-center">
+            <button class="btn-submit">Add Others</button>
+            <input type="text" class="other-name">
+          </div>
+          <div class="other-expense">
+
           </div>
           <div class="submit">
             <button class="btn-submit">Submit</button>
             <input type="reset" class="btn-reset" value="Reset">
           </div>
         </form>
-        <div class="result"></div>
+        <div class="result">
+          <div class="yearly-rent"></div>
+          <div class="yearly-bill"></div>
+          <div class="yearly-morgage"></div>
+          <div class="margin"></div>
+        </div>
       </div>
     </div>
   </section>

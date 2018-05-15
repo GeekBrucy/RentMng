@@ -6,7 +6,7 @@ html {
   min-height: 100%
 }
 body {
-  height: 100%;
+  min-height: 100%;
 }
 input, select {
   background-color: #cc435f;
@@ -21,6 +21,9 @@ button.btn-submit, input.btn-reset {
 input.btn-reset {
   border: 0;
   background-color: #E84545;
+}
+.text-center {
+  text-align: center;
 }
 /****************** customize reset END ******************/
 
@@ -86,3 +89,15 @@ body {
   text-align: center;
 }
 /* pg-content CSS END */
+
+/* bill-sub / other-expense-sub START */
+div[class$='-sub'] {
+  margin: .5rem 0;
+}
+div[class$='-sub'] .title{
+  font-size: .6rem
+}
+div[class$='-sub'] .body span {
+  margin-right: .4rem;
+}
+/* bill-sub / other-expense-sub END */
