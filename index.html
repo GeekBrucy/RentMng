@@ -13,6 +13,42 @@
   <header class="pg-header">
     <h1>Rent Management System (lite)</h1>
   </header>
+  <section class="pg-content">
+    <div class="container">
+      <div class="content-title">
+        <h1>Enter your Rental Income</h1>
+      </div>
+      <div class="content-body">
+        <form>
+          <div class="input-group">
+            <label for="income">Your Rental Income:</label>
+            <input id="income" name="income" type="number">
+            <select name="frequency" id="frequency">
+              <option value="weekly" selected="selected">Weekly</option>
+              <option value="monthly">Monthly</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label for="bill">Your Bill Expense:</label>
+            <input id="bill" name="bill" type="number">
+          </div>
+          <div class="input-group date-input">
+            <input type="date" id="fromDate">
+            <input type="date" id="toDate">
+          </div>
+          <div class="input-group">
+            <label for="morgage">Your Morgage:</label>
+            <input id="morgage" name="morgage" type="number">
+          </div>
+          <div class="submit">
+            <button class="btn-submit">Submit</button>
+            <input type="reset" class="btn-reset" value="Reset">
+          </div>
+        </form>
+        <div class="result"></div>
+      </div>
+    </div>
+  </section>
   <!-- header END -->
   <script src="./assets/js/main.js"></script>
 </body>

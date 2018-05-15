@@ -1,10 +1,3 @@
-/* 
-colors
-  #F35F5F orange - header footer
-  #CC435F red - content
-  #F1EA65 yellow - content
-  #36A3EB blue - for button
-*/
 /****************** customize reset START ******************/
 *, a {
   color: #fff;
@@ -14,6 +7,20 @@ html {
 }
 body {
   height: 100%;
+}
+input, select {
+  background-color: #cc435f;
+  border: .04rem inset #fff;
+  padding: 0 .2rem;
+}
+button.btn-submit, input.btn-reset {
+  padding: 0 .5rem;
+  background-color: #11999E;
+  border-radius: .5rem;
+}
+input.btn-reset {
+  border: 0;
+  background-color: #E84545;
 }
 /****************** customize reset END ******************/
 
@@ -25,23 +32,57 @@ body {
 }
 /****************** tools END ******************/
 
-/****************** header CSS START ******************/
+/****************** pg-header CSS START ******************/
 body {
   background: #F1EA65;
 }
 
-header.pg-header {
+.pg-header {
   background: #f35f5f;
   line-height: 100px;
   text-align: center;
 }
 
-header.pg-header h1 {
+.pg-header h1 {
   font-size: 1rem;
   display: inline-block;
 }
 
-header.pg-header ul, header.pg-header li{
+.pg-header ul, .pg-header li{
   display: inline-block
 }
-/****************** header CSS END ******************/
+/****************** pg-header CSS END ******************/
+
+/* pg-content CSS START */
+.pg-content .content-title {
+  text-align: center
+}
+.pg-content .container {
+  padding: .4rem
+}
+.pg-content .container h1 {
+  font-size: .7rem;
+  display: inline-block;
+}
+
+.content-body form {
+  width: 960px;
+  margin: 0 auto;
+  padding: .4rem;
+  font-size: .5rem;
+}
+.content-body form .input-group {
+  margin: .2rem 0
+}
+.content-body .input-group label {
+  display: inline-block;
+  text-align: right;
+  width: 6rem;
+}
+.content-body .date-input {
+  text-align: center
+}
+.content-body .submit {
+  text-align: center;
+}
+/* pg-content CSS END */
