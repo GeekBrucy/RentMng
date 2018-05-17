@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,63 +9,69 @@
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
   <!-- header START -->
   <header class="pg-header">
     <h1>Rent Management System (lite)</h1>
   </header>
-  <section class="pg-content">
-    <div class="container">
-      <div class="content-title">
-        <h1>Enter your Rental Income</h1>
-      </div>
-      <div class="content-body">
-        <form>
-          <div class="input-group">
-            <label for="income">Your Rental Income:</label>
-            <input id="income" name="income" type="number">
-            <select name="frequency" id="frequency">
-              <option value="weekly" selected="selected">Weekly</option>
-              <option value="monthly">Monthly</option>
-            </select>
-          </div>
-          <div class="input-group add-bill text-center">
+  <section class="pg-content container">
+    <div class="content-title">
+      <h1>Enter your Rental Income</h1>
+    </div>
+    <div class="content-body">
+      <form class="border-right">
+        <div class="input-group">
+          <label for="income">Your Rental Income:</label>
+          <input id="income" name="income" type="number">
+          <select name="frequency" id="frequency">
+            <option value="weekly" selected="selected">Weekly</option>
+            <option value="monthly">Monthly</option>
+          </select>
+        </div>
+        <div class="input-group add-bill text-center clearfix">
+          <div class="button-holder left">
             <button class="btn-submit">Add Bill</button>
-            <input type="text" class="bill-name">
           </div>
-          <div class="bill-section">
-
-          </div>
-          <div class="input-group">
-            <label for="morgage">Your Morgage:</label>
-            <input id="morgage" name="morgage" type="number">
-            <select name="frequency" id="morgage_frequency">
-              <option value="weekly" selected="selected">Weekly</option>
-              <option value="monthly">Monthly</option>
-            </select>
-          </div>
-          <div class="input-group add-other text-center">
+          <input type="text" class="bill-name left">
+        </div>
+        <div class="bill-section"></div>
+        <div class="input-group">
+          <label for="morgage">Your Morgage:</label>
+          <input id="morgage" name="morgage" type="number">
+          <select name="frequency" id="morgage_frequency">
+            <option value="weekly" selected="selected">Weekly</option>
+            <option value="monthly">Monthly</option>
+          </select>
+        </div>
+        <div class="input-group add-other text-center clearfix">
+          <span class="button-holder left">
             <button class="btn-submit">Add Others</button>
-            <input type="text" class="other-name">
-          </div>
-          <div class="other-expense">
-
-          </div>
-          <div class="submit">
-            <button class="btn-submit">Submit</button>
-            <input type="reset" class="btn-reset" value="Reset">
-          </div>
-        </form>
-        <div class="result">
-          <div class="yearly-rent"></div>
-          <div class="yearly-bill"></div>
-          <div class="yearly-morgage"></div>
-          <div class="margin"></div>
+          </span>
+          <input type="text" class="other-name left">
+        </div>
+        <div class="other-expense"></div>
+        <div class="submit">
+          <button class="btn-submit">Submit</button>
+          <input type="reset" class="btn-reset" value="Reset">
+        </div>
+      </form>
+      <div class="result">
+        <div class="yearly-rent">
+          <h2 class="income">Yearly Rental Income</h2>
+          <span class="income-amount">123131</span>
+        </div>
+        <div class="bill-result">
+        </div>
+        <hr>
+        <div class="final-result">
         </div>
       </div>
     </div>
   </section>
   <!-- header END -->
+  <script src="./assets/js/utils.js"></script>
   <script src="./assets/js/main.js"></script>
 </body>
+
 </html>

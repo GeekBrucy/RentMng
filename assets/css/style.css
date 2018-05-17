@@ -1,6 +1,7 @@
 /****************** customize reset START ******************/
 *, a {
   color: #fff;
+  box-sizing: border-box;
 }
 html {
   min-height: 100%
@@ -9,9 +10,13 @@ body {
   min-height: 100%;
 }
 input, select {
-  background-color: #cc435f;
+  /* background-color: #cc435f; */
+  color: #000;
   border: .04rem inset #fff;
   padding: 0 .2rem;
+}
+option {
+  color: #000
 }
 button.btn-submit, input.btn-reset {
   padding: 0 .5rem;
@@ -25,23 +30,39 @@ input.btn-reset {
 .text-center {
   text-align: center;
 }
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+.border-right {
+  border-right: 2px solid #ccc;
+}
 /****************** customize reset END ******************/
 
 /****************** tools START******************/
 .container {
   width: 1280px;
-  background-color: #cc435f;
+  background-color: #332C23;
   margin: 0 auto
 }
 /****************** tools END ******************/
 
 /****************** pg-header CSS START ******************/
 body {
-  background: #F1EA65;
+  background: #577590;
 }
 
 .pg-header {
-  background: #f35f5f;
+  background: #F2A541;
   line-height: 100px;
   text-align: center;
 }
@@ -56,48 +77,149 @@ body {
 }
 /****************** pg-header CSS END ******************/
 
-/* pg-content CSS START */
+/****************** pg-content CSS START ******************/
+.pg-content {
+  padding: .5rem 0;
+}
 .pg-content .content-title {
-  text-align: center
+  text-align: center;
 }
 .pg-content .container {
-  padding: .4rem
+  padding: .4rem;
+  width: 50%;
 }
-.pg-content .container h1 {
+.pg-content.container h1 {
   font-size: .7rem;
   display: inline-block;
 }
 
+.content-body {
+  display: flex;
+  justify-content: space-between;
+}
 .content-body form {
-  width: 960px;
+  width: 60%;
+  transition: all .5s;
+}
+.content-body form.expand {
+  width: 100%;
+  text-align: center;
+  border-right: 0;
+}
+.content-body form.expand div[class*='add'] {
   margin: 0 auto;
+  width: 60%;
+  padding-left: .15rem;
+}
+.content-body .result {
+  width: 38%
+}
+
+.content-body form, .content-body .result {
   padding: .4rem;
+  margin: .4rem 0;
   font-size: .5rem;
 }
 .content-body form .input-group {
-  margin: .2rem 0
+  margin: .2rem 0;
 }
 .content-body .input-group label {
   display: inline-block;
   text-align: right;
-  width: 6rem;
+  vertical-align: middle;
+  width: 5rem;
+}
+.content-body .input-group .button-holder {
+  text-align: right;
+  display: inline-block;
+  width: 5rem;
+  margin-right: 0.15rem;
+}
+
+.bill, .other {
+  border: 2px solid #ccc;
+  margin: .4rem 0;
 }
 .content-body .date-input {
-  text-align: center
+  text-align: center;
 }
 .content-body .submit {
   text-align: center;
+  margin-top: .5rem;
 }
-/* pg-content CSS END */
+/****************** pg-content CSS END ******************/
 
-/* bill-sub / other-expense-sub START */
-div[class$='-sub'] {
-  margin: .5rem 0;
+/****************** result CSS START ******************/
+/************ layout ************/
+.result {
+  text-align: center;
+  transition: width .5s;
 }
-div[class$='-sub'] .title{
-  font-size: .6rem
+.result.hide {
+  width: 0;
+  font-size: 0
 }
-div[class$='-sub'] .body span {
-  margin-right: .4rem;
+.bill-result {
+  padding: .3rem 0
 }
-/* bill-sub / other-expense-sub END */
+.bill-result-title, .bill-result-detail-content .content-item {
+  padding: .1rem 0
+}
+.bill-result-detail-content, .final-total, .margin {
+  padding: .2rem 0
+}
+.bill-result-detail-content .content-item span,
+.final-total span {
+  display: inline-block;
+  width: 48%;
+}
+.bill-result-detail-content .content-item .item-key {
+  text-align: right;
+}
+.bill-result-detail-content .content-item .item-value {
+  text-align: left;
+}
+
+/************ coloring ************/
+.bill-result-detail {
+  color: #fff;
+}
+.bill-result-detail h3[class*="gas"] {
+  background: #000;
+}
+.bill-result-detail h3[class*="water"] {
+  background: #0496FF;
+}
+.bill-result-detail h3[class*="elec"] {
+  background: #FFC43D;
+}
+.bill-result-detail h3[class*="rate"] {
+  background: #321313;
+}
+.bill-result-detail h3[class*="inter"] {
+  background: #321313;
+}
+.result .income {
+  color: #00BEBE;
+  padding-bottom: .2rem;
+}
+.result .income-amount {
+  color: #A2EF44;
+}
+.result .expense {
+  color: #F35F5F;
+  text-align: right;
+}
+.result .expense-amount {
+  color: #FF0000;
+  text-align: left;
+}
+.gain {
+  color: #A2EF44 !important;
+}
+
+.loss {
+  color: #FF0000 !important;
+}
+
+/****************** result CSS END ******************/
